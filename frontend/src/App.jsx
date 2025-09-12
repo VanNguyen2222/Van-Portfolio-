@@ -7,8 +7,11 @@ function App() {
 
   return (
     <>
-      dfsdf
-      <MyButton chidren={"Dsfsdf"}/>
+      <header>
+        
+      </header>
+      <main></main>
+      <footer></footer>
     </>
   )
 }

@@ -10,4 +10,9 @@ export class User {
 
     @Column({ unique: true })
     email!: string;
+
+    constructor(id: number, name: string){
+        this.id = id;
+        this.name = name;
+    }
 }
