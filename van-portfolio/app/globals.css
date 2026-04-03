@@ -1,0 +1,21 @@
+@import "tailwindcss"; /* Dòng này là bắt buộc cho v4 */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+[data-theme='dark'] {
+  --background: 10, 10, 10;
+  --foreground: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  /* Tạo hiệu ứng Grid Background */
+  background-image: 
+    linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
