@@ -26,7 +26,7 @@ body {
 }
 
 main {
-  max-width: 768px;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem 0.5rem 2rem;
 }
@@ -58,7 +58,6 @@ header {
 /*Ipad dọc(768 x 1024)*/
 @media screen and (min-width: 768px){
   main{
-    max-width: 1000px;
     padding: 2rem 1.5rem 4rem;
   }
 
@@ -73,8 +72,33 @@ header {
 /*Ipad ngang(1024 x 768)*/
 @media screen and (min-width: 1024px){
   main{
-    max-width: 1200px;
-    padding: 2rem 1.5rem 4rem;
+    padding: 2rem 10rem 4rem;
+  }
+
+  .hero .hero-grid, .about .about-grid{
+    flex-direction: row;
+  }
+  .skill-item{
+    max-width: 300px; 
+  }
+}
+
+@media screen and (min-width: 1024px){
+  main{
+    padding: 2rem 6rem 4rem;
+  }
+
+  .hero .hero-grid, .about .about-grid{
+    flex-direction: row;
+  }
+  .skill-item{
+    max-width: 300px; 
+  }
+}
+
+@media screen and (min-width: 1400px){
+  main{
+    padding: 2rem 12rem 4rem;
   }
 
   .hero .hero-grid, .about .about-grid{
