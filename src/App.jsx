@@ -93,14 +93,11 @@ function App() {
 
   return (
     <>
-      <header>
-        <Nav />
-      </header>
-
+      <Nav />
       <main>
         <section id="home" className="section hero">
           <Grid container spacing={2} className="hero-grid">
-            <Grid size={{ xs: 6, md: 8 }} sx={{textAlign: "center", position: "relative", width:'100%'}}>
+            <Grid size={{ xs: 6, md: 8 }} sx={{textAlign: "center", position: "relative", width: "100%"}}>
               <Box
                 sx={{
                   position: "absolute",
@@ -154,7 +151,7 @@ function App() {
                 }}
               />
             </Grid>
-            <Grid size={{ xs: 6, md: 4 }}>
+            <Grid size={{ xs: 6, md: 4 }} sx={{width:"100%"}}>
                 <Box
                   component="img"
                   src={avatar}
@@ -176,7 +173,7 @@ function App() {
             <Grid container spacing={2}
             className="about-grid"
              >
-            <Grid size={{ xs: 6, md: 4 }} sx={{textAlign: "center", position: "relative"}}>
+            <Grid size={{ xs: 6, md: 4 }} sx={{textAlign: "center", position: "relative", width: "100%"}}>
                 <Box
                   component="img"
                   src={avatarFb}
@@ -190,7 +187,7 @@ function App() {
                   }}
                 />
             </Grid>
-            <Grid size={{ xs: 6, md: 8 }} sx={{width: "100%"}}>
+            <Grid size={{ xs: 6, md: 8 }} sx={{width:"100%"}}>
               <Typography
                   variant="h6"
                   color="text.secondary"
@@ -246,18 +243,6 @@ function App() {
 
         <section id="skill" className="section skills">
           <h2>Skills</h2>
-          <Typography
-            sx={{
-              color: "#111827",
-              textAlign: "center",
-              mb: 6,
-              maxWidth: 900,
-              mx: "auto",
-            }}
-          >
-            Technologies and tools I use to build modern, scalable,
-            and user-friendly web applications.
-          </Typography>
 
           <Box
             sx={{
@@ -358,7 +343,7 @@ function App() {
                 >
                   Ready to build something together? Send a message and I’ll reply shortly.
               </Typography>
-              <div style={{display:'flex', gap: '50px', marginTop: '20px'}}>
+              <div style={{display:'flex', gap: '50px', marginTop: '20px', flexWrap: 'wrap'}}>
                 {contactInfo.map((contact) => (
                   <a
                 className="secondary-link"

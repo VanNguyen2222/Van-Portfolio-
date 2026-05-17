@@ -5,7 +5,11 @@
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 1000;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     
         .nav-inner{
             display: flex;
@@ -13,12 +17,12 @@
             align-items: center;
             padding: 10px 20px;
             background-color: #f8f8f8;
+            width: 100%;
     
             .logo{
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: black;
     
                 img {
                     width: 30px;
@@ -26,18 +30,123 @@
             };
     
             .menu-desktop{
-                display: flex;
+                display: none;
                 gap: 20px;
+                flex-direction: column;
+                overflow-wrap: break-word;
+
     
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: white;
                     font-weight: bold;
     
                     &:hover{
                         color: #007BFF;
                     }
+                    
                 }
             }
-    }    
+            
+    }   
+    .menu-mobile{
+                display: block;
+                cursor: pointer;
+                color: black;
+            }
+}
+
+.nav.overlay{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    align-items: flex-start;
+}
+
+.nav.overlay .nav-inner{
+    background: none;
+    color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.nav.overlay .nav-inner .menu-desktop{
+    display: flex;
+}
+
+.nav.overlay .menu-mobile{
+    color: white;
+    margin-top: 12px;
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (min-width: 768px){
+    .nav {
+        .nav-inner .menu-desktop{
+            flex-direction: row;
+            display: flex;
+            a{
+                color: black;
+            }
+        }  
+        .menu-mobile{
+            display: none;
+        }
+           
+    }
+
+    .nav.overlay{
+            display: none;
+        }
+
+}
+/*Ipad ngang(1024 x 768)*/
+@media screen and (min-width: 1024px){
+    .nav {
+        .nav-inner .menu-desktop{
+            flex-direction: row;
+            display: flex;
+            a{
+                color: black;
+            }
+        }  
+        .menu-mobile{
+            display: none;
+        }
+        .overlay{
+            display: none;
+        }   
+    }
+    .nav.overlay{
+            display: none;
+        }
+}
+
+@media screen and (min-width: 1400px){
+    .nav {
+        .nav-inner .menu-desktop{
+            flex-direction: row;
+            display: flex;
+            a{
+                color: black;
+            }
+        }  
+        .menu-mobile{
+            display: none;
+        }
+        .overlay{
+            display: none;
+        }   
+    }
+    .nav.overlay{
+            display: none;
+        }
 }
